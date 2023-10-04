@@ -61,7 +61,11 @@ echo "Running script using"
 echo "  input: $INPUT_FILE"
 echo "  output: $OUTPUT_FOLDER"
 
-outfile="$OUTPUT_FOLDER/$file.json"
+mkdir -p $OUTPUT_FOLDER
+
+
+
+outfile="$OUTPUT_FOLDER/$(basename "$INPUT_FILE").json"
 
 audiowaveform -i "$INPUT_FILE" -o "$outfile" --pixels-per-second 20 --bits 16
 

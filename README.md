@@ -2,16 +2,11 @@
 
 A docker image to generate waveforms using BBC audio waveform
 
-# build
+## Usage
 
 ```sh
-docker build -t waveform .
+docker build -t stemplayer-js-generate-waveform .
+docker run -it -v $PWD:/workdir stemplayer-js-generate-waveform --input source/my-audio.wav --output output
 ```
 
-# run
-
-```sh
-docker run -it -v $PWD:/workdir waveform --input mytrack.wav
-```
-
-the output will be a json file `mytrack.json` in the same folder
+the output will be a json file `my-audio.wav` in the output folder
