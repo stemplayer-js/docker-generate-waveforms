@@ -63,9 +63,11 @@ echo "  output: $OUTPUT_FOLDER"
 
 mkdir -p $OUTPUT_FOLDER
 
+s=$(basename "$INPUT_FILE")
+file="$(echo ${s%.*})"
 
 
-outfile="$OUTPUT_FOLDER/$(basename "$INPUT_FILE").json"
+outfile="$OUTPUT_FOLDER/$file.json"
 
 audiowaveform -i "$INPUT_FILE" -o "$outfile" --pixels-per-second 20 --bits 16
 

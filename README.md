@@ -9,4 +9,4 @@ docker build -t stemplayer-js-generate-waveform .
 docker run -it -v $PWD:/workdir stemplayer-js-generate-waveform --input source/my-audio.wav --output output
 ```
 
-the output will be a json file `my-audio.wav` in the output folder
+the output will be a json file `my-audio.json` in the output folder
